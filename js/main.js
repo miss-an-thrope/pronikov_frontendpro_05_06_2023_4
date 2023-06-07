@@ -44,19 +44,19 @@ if (compareNum1 === '' && compareNum2 === '') {
 
 let meter = 1;
 let kilometer = meter * 1000;
-let feet = meter * 305;
+let feet = meter * 0.305;
 
 let giveKm = Number(prompt(
 `Task №2
 
 Відомі дві відстані. Одне у кілометрах, інше – у футах (1 фут = 0,305м). Яка відстань менша?
 
-Введіть відстань у кілометрах:`)).toFixed(2);
+Введіть відстань у кілометрах:`)).toFixed(3);
 
-let giveFt = Number(prompt('Введіть відстань у футах:')).toFixed(2);
-let kmDistance = Number(Number(giveKm) * kilometer).toFixed(2);
-let ftDistance = Number(Number(giveFt) * feet).toFixed(2);
-let differDistance = Number(kmDistance) - Number(ftDistance).toFixed(2);
+let giveFt = Number(prompt('Введіть відстань у футах:')).toFixed(3);
+let kmDistance = Number(Number(giveKm) * kilometer).toFixed(3);
+let ftDistance = Number(Number(giveFt) * feet).toFixed(3);
+let differDistance = Number(kmDistance) - Number(ftDistance).toFixed(3);
 
 if (giveKm === '' && giveFt === '') {
    alert(`Ви не ввели жодного значення. ${templateRefreshPage}`);
@@ -205,7 +205,7 @@ let threeDigitProduct = firstDigitNum1 * secondDigitNum1 * thirdDigitNum1;
 
 let answerTemplate = `Число (${Number(threeDigitNum1)}) розкладається на: (${firstDigitNum1}), (${secondDigitNum1}) та (${thirdDigitNum1}).
 
-Сума цих цифр дорівнює (${threeDigitSum}). Остання цифра: (${sumLastDigit}), тому це число`;
+Сума цих цифр дорівнює (${threeDigitSum}). Остання цифра: (${thirdDigitNum1}) (*REMARK: (${sumLastDigit}) \u2013 остання цифра від суми), тому це число`;
 
 if (threeDigitNum1 === '') {
    alert(`Ви не ввели жодного значення. ${templateRefreshPage}`);
@@ -314,7 +314,7 @@ if (threeDigitNum2 === '') {
       Перше число (${firstDigitNum2}) однакове з другим (${secondDigitNum2}), але не дорівнює третьому числу (${thirdDigitNum2}).`);
 }
 
-// Task №8
+// // Task №8
 
 let sixDigitNum = prompt(
 `Task №8
